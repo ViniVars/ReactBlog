@@ -1,5 +1,30 @@
 @import "tailwindcss";
 
-body{
-    
+body {
+    font-family: "Inconsolata", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+
+div::-webkit-scrollbar {
+  width: 8px; 
+  height: 8px; 
+}
+
+div::-webkit-scrollbar-thumb {
+  background-color: #27272A; 
+  border-radius: 10px; 
+  border: 2px solid #27272A; 
+}
+
+div::-webkit-scrollbar-track {
+  background: #b7b7b8; 
+  border-radius: 10px; 
+}
+
+div::-webkit-scrollbar-button {
+  display: none; 
 }
