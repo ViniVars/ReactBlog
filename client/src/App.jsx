@@ -2,7 +2,6 @@ import { useState, createContext } from "react";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar.jsx";
 import Home from "./Home.jsx";
-import Login from "./Login.jsx";
 import AddBlog from "./AddBlog.jsx";
 import AllBlogs from "./AllBlogs.jsx";
 import Display from "./Display.jsx";
@@ -34,7 +33,7 @@ function App() {
 }
 
 function Vini({ children }) {
-  const [user, setUser] = useState("Guest");
+  const [user, setUser] = useState("Hi, Guest");
   const [pass, setPass] = useState("");
   const [tog, setTog] = useState(true)
   return (

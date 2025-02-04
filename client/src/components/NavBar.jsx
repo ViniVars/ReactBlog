@@ -18,7 +18,7 @@ export default function NavBar() {
                 <div></div>
                 <div className='flex items-center justify-between gap-10'>
                     <img className='scale-150' src="../../public/web-design-library.png" alt="" /> 
-                    <span>{user || "Guest"}</span>
+                    <span>{user || "Hi, Guest"}</span>
                 </div>
             </div>
             <div></div>
