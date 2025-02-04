@@ -6,6 +6,7 @@ import Login from "./Login.jsx";
 import AddBlog from "./AddBlog.jsx";
 import AllBlogs from "./AllBlogs.jsx";
 import Display from "./Display.jsx";
+import Edit from "./Edit.jsx";
 
 export const Glo = createContext();
 
@@ -13,14 +14,21 @@ export const Glo = createContext();
 function App() {
   return (
     <Vini>
-        <NavBar />
-      <Routes>
-        {/* <Route  path="/" element={<Login/>} /> */}
-        <Route path="/" element={<Home/>}/>
-        <Route path="/New" element={<AddBlog/>}/>
-        <Route path="/All" element={<AllBlogs/>}/>
-        <Route path="/Details/:slug" element={<Display/>} />
-      </Routes>
+      <div className="h-screen w-screen bg-black">
+        <div className='w-screen flex items-center justify-between text-white h-[20%] font-bold text-lg'>
+          <NavBar />
+        </div>
+        <div className="w-full h-[80%]">
+          <Routes>
+            {/* <Route  path="/" element={<Login/>} /> */}
+            <Route path="/" element={<Home/>}/>
+            <Route path="/New" element={<AddBlog/>}/>
+            <Route path="/All" element={<AllBlogs/>}/>
+            <Route path="/Details/:slug" element={<Display/>} />
+            <Route path="/editBlog/:slug" element={<Edit/>} />
+          </Routes>
+        </div>
+      </div>
     </Vini>
   );
 }

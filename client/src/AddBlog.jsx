@@ -35,10 +35,11 @@ export default function AddBlog() {
             text: "",
             icon: "success"
         });
+        ig = undefined
     }
     return (
         <>
-            <div class="main h-[545px] w-[1536px] bg-white flex justify-center items-center font-semibold">
+            <div class="main h-full w-full bg-white flex justify-center items-center font-semibold">
                 <div class="bcons flex flex-col h-[90%] w-[60%] justify-center items-center rounded-[21px] gap-7 shadow-2xl p-11">
                     <div class="title relative bottom-[10px]">
                         <input ref={iref} type="text" class="btitle p-3 border-[3px] rounded-[15px] border-gray-300 focus:border-none w-[350px]" placeholder="Title..." />

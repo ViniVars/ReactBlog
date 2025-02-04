@@ -1,13 +1,15 @@
-import React, { useContext } from 'react' 
+import React, { useContext} from 'react' 
 import { Glo } from '../App'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate} from 'react-router-dom'
 
 export default function NavBar() {
-    const {user, tog} = useContext(Glo)
-    const router = useNavigate()
+    const {user, tog, pass} = useContext(Glo)
+    function Del(){
+        localStorage.removeItem(pass)
+    }
   return (
     <>
-        <div className='bg-black w-screen flex items-center justify-between text-white h-[150px] font-bold text-lg'>
+        
             <div className='flex gap-2 items-center h-full justify-center'>
                 <div></div>
                 <div></div>
@@ -32,16 +34,15 @@ export default function NavBar() {
             ) : 
             (
                 <div className='flex justify-content items-center gap-20'>
-                    <Link to='/Home'>Edit</Link>
-                    <Link to='/New'>Delete</Link>
+                    <Link to={`/editBlog/${pass}`}>Edit</Link>
+                    <Link to='/All' onClick={Del}>Delete</Link>
                     <Link></Link>
                     <Link></Link>
                     <Link></Link>
                 </div>
             )
             }
-            
-        </div>
+        
     </>
   )
 }

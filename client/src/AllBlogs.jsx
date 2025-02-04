@@ -20,7 +20,7 @@ export default function AllBlogs() {
     }, [])
   return (
     <>  
-        <div class="allblogs h-[545px] w-[1536px] grid gap-10 grid-cols-3 p-15 px-17 scrollbar-hide bg-black text-white font-semibold overflow-x-auto">
+        <div class="allblogs h-full w-full grid gap-10 grid-cols-3 p-15 px-17 scrollbar-hide bg-black text-white font-semibold overflow-x-auto">
             {Blog && Blog.map((ele) => {
                 return (
                     <Card blog = {ele}/>
