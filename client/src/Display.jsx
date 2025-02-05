@@ -4,7 +4,7 @@ import { Glo } from './App'
 export default function Display() {
     const { slug } = useParams()
     const {setTog, setPass} = useContext(Glo)
-    setPass(slug)
+    setPass(slug);
     setTog(false);
     useEffect(()=>{
 
